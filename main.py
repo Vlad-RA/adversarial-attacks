@@ -1,5 +1,3 @@
-from typing import Callable, Dict, List, Tuple
-
 import torch
 import torch.nn.functional as F
 import torchvision.models as models
@@ -11,6 +9,9 @@ from io import BytesIO
 import numpy as np
 import pandas as pd
 
+# -------------------------------------------------------
+# Вспомогательная функция для безопасной загрузки изображений
+# -------------------------------------------------------
 
 def load_image_from_url(url: str) -> Image.Image:
     resp = requests.get(url, timeout=15)
